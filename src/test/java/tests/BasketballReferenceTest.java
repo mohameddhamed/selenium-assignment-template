@@ -134,4 +134,12 @@ public class BasketballReferenceTest {
         Assert.assertNotNull(title);
         Assert.assertTrue(title.length() > 0, "Page title should not be empty");
     }
+    
+    @Test(description = "Test year dropdown selection on homepage")
+    public void testDropdownSelection() {
+        driver.navigate().to(Config.getBaseUrl());
+        Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page should be displayed");
+        homePage.selectYear("2024");
+        Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page should remain after dropdown selection");
+    }
 }

@@ -87,7 +87,7 @@ basic:
     description: "Fill or read the content of a textarea element"
 
   dropdown:                  # 2 pts | once
-    done: false
+    done: true
     description: "Select an option from a drop-down (using Select class or similar)"
     link: "https://www.selenium.dev/documentation/webdriver/support_features/select_lists/"
 
@@ -159,7 +159,7 @@ advanced:
     link: "https://www.selenium.dev/documentation/webdriver/elements/file_upload/"
 
   history_test:              # 4 pts | once
-    done: false
+    done: true
     description: "Test browser history navigation (e.g. back(), forward())"
     link: "https://www.selenium.dev/documentation/webdriver/interactions/navigation/"
 
@@ -195,7 +195,7 @@ advanced:
     link: "https://www.browserstack.com/guide/take-screenshots-in-selenium"
     
   headless_execution:        # 4 pts | once
-    done: false
+    done: true
     description: "Run tests in headless mode (browser without visible UI)"
     link: "https://www.selenium.dev/documentation/webdriver/browsers/chrome/"
 
