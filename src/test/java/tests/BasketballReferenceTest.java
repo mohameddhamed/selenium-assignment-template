@@ -1,8 +1,11 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 import org.testng.Assert;
+import java.util.Random;
 
 import config.Config;
 import listeners.ScreenshotListener;
@@ -175,5 +178,40 @@ public class BasketballReferenceTest {
         String currentTitle = homePage.getPageTitle();
         Assert.assertNotNull(currentTitle, "Current page title should not be null");
         Assert.assertTrue(currentTitle.length() > 0, "Page title should not be empty");
+    }
+    
+    @Test(description = "Test with random player data - navigate to random players")
+    public void testRandomPlayerData() {
+        // Generate random player IDs and test them
+        String[] playerIds = {
+            "leonaka01", "jamesle01", "curryst01", 
+            "duranke01", "bookedb01", "antetgo01", "embiijo01"
+        };
+        
+        Random random = new Random();
+        for (int i = 0; i < 3; i++) {
+            String randomPlayer = playerIds[random.nextInt(playerIds.length)];
+            String playerUrl = Config.getBaseUrl() + "/players/" + randomPlayer.charAt(0) + "/" + randomPlayer + ".html";
+            
+            driver.navigate().to(playerUrl);
+            Assert.assertTrue(playerDetailPage.isPlayerDetailPageDisplayed(), 
+                "Player page should display for random player: " + randomPlayer);
+        }
+    }
+    
+    @Test(description = "Test hover action on navigation element")
+    public void testHoverAction() {
+        driver.navigate().to(Config.getBaseUrl());
+        
+        // Find a navigation link to hover over
+        WebElement navLink = driver.findElement(org.openqa.selenium.By.xpath("//a[contains(@href, '/leagues/')]"));
+        
+        // Perform hover action using Actions class
+        Actions actions = new Actions(driver);
+        actions.moveToElement(navLink).perform();
+        
+        // Verify element is still present and accessible after hover
+        Assert.assertTrue(navLink.isDisplayed(), "Navigation link should still be displayed after hover");
+        Assert.assertTrue(navLink.getText().length() > 0, "Navigation link should have text");
     }
 }
