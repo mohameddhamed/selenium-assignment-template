@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+*.jar
+*.class
+
+# Maven
+target/
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.metals/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.pid

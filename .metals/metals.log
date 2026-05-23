@@ -1,6 +1,0 @@
-2026.05.18 18:13:47 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
-2026.05.18 18:13:47 INFO  no build target found for /Users/mohamedhamed/Documents/selenium-assignment-template/src/test/java/listeners/ScreenshotListener.java. Using fallback presentation compiler.[0m
-2026.05.18 18:13:47 INFO  no build target found for /Users/mohamedhamed/Documents/selenium-assignment-template/src/test/java/listeners/ScreenshotListener.java. Using fallback presentation compiler.[0m
-2026.05.18 18:13:47 INFO  no build target found for /Users/mohamedhamed/Documents/selenium-assignment-template/src/test/java/listeners/ScreenshotListener.java. Using fallback presentation compiler.[0m
-2026.05.18 18:13:48 INFO  no build target found for /Users/mohamedhamed/Documents/selenium-assignment-template/src/test/java/listeners/ScreenshotListener.java. Using fallback presentation compiler.[0m
-2026.05.18 18:16:47 INFO  no build target found for /Users/mohamedhamed/Documents/selenium-assignment-template/src/test/java/listeners/ScreenshotListener.java. Using fallback presentation compiler.[0m
