@@ -4,13 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import config.Config;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
     public static WebDriver createDriver() {
+        WebDriverManager.chromedriver().setup();
+        
         ChromeOptions options = new ChromeOptions();
         
         if (Config.isHeadless()) {
-            options.addArguments("--headless");
+            options.addArguments("--headless=new");
         }
         
         options.addArguments("--start-maximized");
@@ -21,3 +24,4 @@ public class DriverFactory {
         return new ChromeDriver(options);
     }
 }
+
