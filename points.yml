@@ -21,7 +21,7 @@ student:
 ai_usage:
   used: true
   tools: "GitHub Copilot"
-  description: "Used Copilot for code generation of Page Object classes, test methods, and configuration utilities. All generated code was reviewed and tested."
+  description: "used ai to generate some java code"
                        
 # ----------------------------------------------------------
 # Quality requirements (gatekeepers)
