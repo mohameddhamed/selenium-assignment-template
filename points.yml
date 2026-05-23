@@ -139,7 +139,7 @@ advanced:
     link: "https://www.selenium.dev/documentation/webdriver/drivers/options/"
 
   cookie_manipulation:       # 6 pts | once
-    done: false
+    done: true
     description: "Manipulate cookies meaningfully (e.g. add/delete/read cookies, skip consent popup)"
     link: "https://www.selenium.dev/documentation/webdriver/interactions/cookies/"
 
@@ -164,7 +164,7 @@ advanced:
     link: "https://www.selenium.dev/documentation/webdriver/interactions/navigation/"
 
   test_dependencies:         # 4 pts | once
-    done: false
+    done: true
     description: "Make a test method depend on another using dependsOnMethods or dependsOnGroups — e.g. a logout test that only runs if login passed"
     link: "https://testng.org/#_test_methods_classes_and_groups"
     

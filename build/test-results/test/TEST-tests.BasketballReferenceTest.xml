@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.BasketballReferenceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-23T17:22:27.264Z" hostname="Mohameds-MacBook-Pro.local" time="24.548">
+<testsuite name="tests.BasketballReferenceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-05-23T17:26:39.720Z" hostname="Mohameds-MacBook-Pro.local" time="25.066">
   <properties/>
-  <testcase name="testBrowserNavigation" classname="tests.BasketballReferenceTest" time="1.328"/>
-  <testcase name="testDropdownSelection" classname="tests.BasketballReferenceTest" time="0.41"/>
-  <testcase name="testExplicitWaitForElement" classname="tests.BasketballReferenceTest" time="1.621"/>
-  <testcase name="testHomePageDisplayed" classname="tests.BasketballReferenceTest" time="0.424"/>
-  <testcase name="testHomePageTitle" classname="tests.BasketballReferenceTest" time="0.351"/>
-  <testcase name="testMultiplePlayerPages" classname="tests.BasketballReferenceTest" time="7.362"/>
-  <testcase name="testMultipleStatsTablesCount" classname="tests.BasketballReferenceTest" time="1.451"/>
-  <testcase name="testPageTitleNotEmpty" classname="tests.BasketballReferenceTest" time="2.655"/>
-  <testcase name="testPlayerImageDisplayed" classname="tests.BasketballReferenceTest" time="1.413"/>
-  <testcase name="testPlayerNameDisplayed" classname="tests.BasketballReferenceTest" time="1.887"/>
-  <testcase name="testPlayerStatsDisplayed" classname="tests.BasketballReferenceTest" time="1.592"/>
-  <testcase name="testScrollToElement" classname="tests.BasketballReferenceTest" time="2.295"/>
+  <testcase name="testBrowserNavigation" classname="tests.BasketballReferenceTest" time="1.504"/>
+  <testcase name="testCookieManipulation" classname="tests.BasketballReferenceTest" time="0.385"/>
+  <testcase name="testDropdownSelection" classname="tests.BasketballReferenceTest" time="0.326"/>
+  <testcase name="testExplicitWaitForElement" classname="tests.BasketballReferenceTest" time="1.711"/>
+  <testcase name="testHomePageDisplayed" classname="tests.BasketballReferenceTest" time="0.322"/>
+  <testcase name="testHomePageTitle" classname="tests.BasketballReferenceTest" time="0.317"/>
+  <testcase name="testMultiplePlayerPages" classname="tests.BasketballReferenceTest" time="7.339"/>
+  <testcase name="testMultipleStatsTablesCount" classname="tests.BasketballReferenceTest" time="1.371"/>
+  <testcase name="testNavigateToHomeForDependency" classname="tests.BasketballReferenceTest" time="0.643"/>
+  <testcase name="testPageTitleNotEmpty" classname="tests.BasketballReferenceTest" time="2.257"/>
+  <testcase name="testPlayerImageDisplayed" classname="tests.BasketballReferenceTest" time="1.443"/>
+  <testcase name="testPlayerNameDisplayed" classname="tests.BasketballReferenceTest" time="1.97"/>
+  <testcase name="testPlayerStatsDisplayed" classname="tests.BasketballReferenceTest" time="1.35"/>
+  <testcase name="testScrollToElement" classname="tests.BasketballReferenceTest" time="2.336"/>
+  <testcase name="testDependentBrowserNavigation" classname="tests.BasketballReferenceTest" time="0.003"/>
   <system-out><![CDATA[Year dropdown not found: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='year' or @id='year']"}
   (Session info: chrome=148.0.7778.168)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.2', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8602303b7e4fae6b6645d097352769ad, findElement {using=xpath, value=//select[@name='year' or @id='year']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/fn/nqsj_3w124l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63907}, goog:processID: 65301, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63907/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8602303b7e4fae6b6645d097352769ad
+Command: [dd10149dcd72637da9afd2b67a7f4a2b, findElement {using=xpath, value=//select[@name='year' or @id='year']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/fn/nqsj_3w124l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64039}, goog:processID: 66678, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64039/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd10149dcd72637da9afd2b67a7f4a2b
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/mohamedhamed/.cache/selenium/chromedriver/mac-arm64/148.0.7778.178/chromedriver
-May 23, 2026 7:22:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 23, 2026 7:26:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 148
-May 23, 2026 7:22:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 23, 2026 7:26:41 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 148.0.7778.168. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

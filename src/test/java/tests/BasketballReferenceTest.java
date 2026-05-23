@@ -142,4 +142,38 @@ public class BasketballReferenceTest {
         homePage.selectYear("2024");
         Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page should remain after dropdown selection");
     }
+    
+    @Test(description = "Test adding and verifying cookies")
+    public void testCookieManipulation() {
+        driver.navigate().to(Config.getBaseUrl());
+        
+        // Add a cookie
+        driver.manage().addCookie(new org.openqa.selenium.Cookie("test_user_preference", "dark_mode"));
+        driver.manage().addCookie(new org.openqa.selenium.Cookie("session_id", "12345abcde"));
+        
+        // Verify cookies were added
+        org.openqa.selenium.Cookie cookie = driver.manage().getCookieNamed("test_user_preference");
+        Assert.assertNotNull(cookie, "Cookie should be added");
+        Assert.assertEquals(cookie.getValue(), "dark_mode", "Cookie value should match");
+        
+        // Delete a cookie and verify deletion
+        org.openqa.selenium.Cookie cookieToDelete = driver.manage().getCookieNamed("session_id");
+        driver.manage().deleteCookie(cookieToDelete);
+        org.openqa.selenium.Cookie deletedCookie = driver.manage().getCookieNamed("session_id");
+        Assert.assertNull(deletedCookie, "Cookie should be deleted");
+    }
+    
+    @Test(description = "Base test for dependency chain - navigate to home page", groups = {"navigationGroup"})
+    public void testNavigateToHomeForDependency() {
+        driver.navigate().to(Config.getBaseUrl());
+        Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page should be displayed for dependent test");
+    }
+    
+    @Test(description = "Dependent test that requires navigation first", dependsOnGroups = {"navigationGroup"})
+    public void testDependentBrowserNavigation() {
+        // This test depends on testNavigateToHomeForDependency completing first
+        String currentTitle = homePage.getPageTitle();
+        Assert.assertNotNull(currentTitle, "Current page title should not be null");
+        Assert.assertTrue(currentTitle.length() > 0, "Page title should not be empty");
+    }
 }
