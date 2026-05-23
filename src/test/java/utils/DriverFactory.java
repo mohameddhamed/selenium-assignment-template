@@ -19,7 +19,7 @@ public class DriverFactory {
         options.addArguments("--start-maximized");
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
-        options.setWindowSize(Config.getWindowWidth(), Config.getWindowHeight());
+        options.addArguments(String.format("--window-size=%d,%d", Config.getWindowWidth(), Config.getWindowHeight()));
         
         return new ChromeDriver(options);
     }
